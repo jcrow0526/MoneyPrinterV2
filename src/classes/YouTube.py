@@ -436,10 +436,10 @@ class YouTube:
         """
         path = os.path.join(ROOT_DIR, ".mp", str(uuid4()) + ".wav")
 
-        # Clean script, remove every character that is not a word character, a space, a period, a question mark, or an exclamation mark.
-        self.script = re.sub(r'[^\w\s.?!]', '', self.script)
+        # Clean script, remove unsupported characters while keeping common punctuation
+        self.script = re.sub(r"[^\w\s.,?!¡¿]", "", self.script, flags=re.UNICODE)
 
-        tts_instance.synthesize(self.script, path)
+        tts_instance.synthesize(self.script, path, language=self.language)
 
         self.tts_path = path
 

@@ -19,6 +19,10 @@ In your `config.json`, you need the following attributes filled out, so that the
 }
 ```
 
+### Language support
+
+When creating a YouTube account inside the application you can now choose between English and Spanish voice-overs. Select `Spanish` (or `Español`) as the account language to generate scripts, audio narration, and subtitles in Spanish automatically.
+
 ## Roadmap
 
 Here are some features that are planned for the future:
